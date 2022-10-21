@@ -27,9 +27,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   +transient: false
 
-  cp_dbt_standard_package:
-    +database: "{{ env_var('DBT_ARTIFACTS_DATABASE','not-set')}}"
-    +schema: "{{ env_var('DBT_ARTIFACTS_SCHEMA','not-set')}}"
+#   cp_dbt_standard_package:
+#     +database: "{{ env_var('DBT_ARTIFACTS_DATABASE','not-set')}}"
+#     +schema: "{{ env_var('DBT_ARTIFACTS_SCHEMA','not-set')}}"
 
 #hook
 on-run-end:
