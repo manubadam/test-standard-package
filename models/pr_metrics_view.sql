@@ -1,4 +1,3 @@
-#from "{{ env_var('DBT_ARTIFACTS_DATABASE','not-set')}}"."{{ env_var('DBT_ARTIFACTS_SCHEMA','not-set')}}"."PR_METRICS_RAW"
 {{ config(materialized='view', tags = ['std_view'])}}
 
 
