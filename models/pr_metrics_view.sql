@@ -23,6 +23,6 @@ select
     concat('[', REGEXP_REPLACE(dependent_modified_models, '\n', ','), ']') dependent_modified_models,
     concat('[', REGEXP_REPLACE(deleted_models, '\n', ','), ']') deleted_models,
     JOB_STATUS
-from "DBT_DEV_DBT_TESTING_RAW"."DBT_UTIL_COMMON"."PR_METRICS_RAW"    
+from "{{ env_var('DBT_ARTIFACTS_DATABASE','not-set')}}"."{{ env_var('DBT_ARTIFACTS_SCHEMA','not-set')}}"."PR_METRICS_RAW"
 
 
