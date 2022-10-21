@@ -29,7 +29,6 @@ models:
 
   cp_dbt_standard_package:
     +enabled: "{{ env_var('DBT_ARTIFACTS_DATABASE', 'not-set') != 'not-set'}}"
-    +enabled: "{{ env_var('DBT_ARTIFACTS_SCHEMA', 'not-set') != 'not-set'}}"
     +database: "{{ env_var('DBT_ARTIFACTS_DATABASE','not-set')}}"
     +schema: "{{ env_var('DBT_ARTIFACTS_SCHEMA','not-set')}}"
 
